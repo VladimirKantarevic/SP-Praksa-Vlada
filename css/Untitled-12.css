@@ -1,0 +1,60 @@
+// MEDIA QUERY TABLET
+@media only screen and (max-width: 768px) {
+  nav button {
+    h5 {
+      font-size: 11px;
+      line-height: 14px;
+      font-weight: 500;
+    }
+    p {
+      font-size: 10px;
+      line-height: 10px;
+    }
+  }
+  .main1 {
+    .slika {
+      width: 100%;
+    }
+    .text {
+      width: 100%;
+      flex-direction: row;
+      gap: 10%;
+      h2 {
+        font-size: 38px;
+        line-height: 44px;
+      }
+      h3 {
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+  }
+  .main2 div {
+    top: 66%;
+  }
+  .main3 .small {
+    width: 50%;
+    padding: 1%;
+  }
+  .main5 .stats {
+    h2 {
+      font-size: 36px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  .foot {
+    gap: 0;
+  }
+  .div3 {
+    display: none !important;
+  }
+  .div5 {
+    flex-direction: column;
+    height: auto;
+    // p a {
+    //   display: block;
+    // }
+  }
+}

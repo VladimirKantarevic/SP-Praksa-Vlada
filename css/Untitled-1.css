@@ -1,0 +1,59 @@
+// MEDIA QUERY PHONE
+@media only screen and (max-width: 480px) {
+  nav {
+    display: none;
+  }
+  .main2 {
+    div {
+      height: 3px;
+      top: 70%
+    }
+  }
+  .main3 .small {
+    width: 90%;
+    
+    p {
+      font-size: 18px;
+    }
+  }
+  .main5 {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+
+    .stats {
+      width: 100%;
+    }
+  }
+  .main6 {
+    .sub6 {
+      padding: 0;
+    }
+  }
+  .main7 {
+    h3 {
+      width: auto;
+    }
+    button {
+      width: 50%;
+    }
+  }
+
+  .foot {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+
+    .div1, .div2, .div3, .div4 {
+      border: none !important;
+      display: flex !important;
+      width: 90%;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      a {
+        font-size: 10px;
+      }
+    }
+  }
+}

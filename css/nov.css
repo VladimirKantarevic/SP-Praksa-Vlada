@@ -16,9 +16,17 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 8%;
+  padding-inline: 5%;
   padding-top: 1.2%;
   padding-bottom: 1.2%;
+}
+.logo #light-mode {
+  display: flex;
+  border: 1px black solid;
+}
+.logo #light-mode img {
+  margin-top: 5px;
+  height: 35px;
 }
 .logo .logoleft {
   display: flex;
@@ -29,9 +37,11 @@ body {
 @media only screen and (min-width: 481px) {
   .logo .logoright {
     display: flex;
+    font-size: 10px;
+    justify-content: end;
   }
 }
-.logo a {
+.logo .logoright a {
   margin: 5%;
   color: #595959;
   font-family: Roboto;
@@ -40,55 +50,6 @@ body {
   text-align: left;
 }
 
-.navi {
-  display: none;
-}
-@media only screen and (min-width: 768px) {
-  .navi {
-    display: flex;
-    justify-content: center;
-    height: 4rem;
-  }
-}
-.navi button {
-  width: 12%;
-  background-color: #f4f4f4;
-  border-left: 1px solid #D9D9D9;
-}
-.navi button h5 {
-  font-family: Roboto;
-  font-size: 16px;
-  line-height: 20px;
-  color: #000000;
-  font-weight: 500;
-}
-@media only screen and (min-width: 480px) {
-  .navi button h5 {
-    font-size: 12px;
-    line-height: 14px;
-  }
-}
-.navi button p {
-  font-family: Roboto;
-  font-size: 12px;
-  line-height: 14px;
-  color: #474747;
-}
-@media only screen and (min-width: 768px) {
-  .navi button p {
-    font-size: 10px;
-    line-height: 12px;
-  }
-}
-.navi :last-child {
-  border-right: 1px solid #D9D9D9;
-}
-
-#menu {
-  z-index: 2;
-  margin-left: 80%;
-  margin-top: -14%;
-}
 @media only screen and (min-width: 481px) {
   #menu {
     display: none;
@@ -97,7 +58,7 @@ body {
 #menu #menu-bar {
   width: 45px;
   height: 40px;
-  margin: 30px 0 20px 20px;
+  padding-top: 10px;
   cursor: pointer;
 }
 #menu .bar {
@@ -123,6 +84,7 @@ body {
   position: absolute;
   left: 0;
   justify-content: center;
+  z-index: 1;
 }
 #menu .nav ul {
   padding: 0 22px;
@@ -174,6 +136,50 @@ body {
   width: 520px;
   height: 460px;
   transform: translate(-60%, -30%);
+}
+
+.navi {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .navi {
+    display: flex;
+    justify-content: center;
+    height: 4rem;
+  }
+}
+.navi button {
+  width: 12%;
+  background-color: #f4f4f4;
+  border-left: 1px solid #D9D9D9;
+}
+.navi button h5 {
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  font-weight: 500;
+}
+@media only screen and (min-width: 480px) {
+  .navi button h5 {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+.navi button p {
+  font-family: Roboto;
+  font-size: 12px;
+  line-height: 14px;
+  color: #474747;
+}
+@media only screen and (min-width: 768px) {
+  .navi button p {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
+.navi :last-child {
+  border-right: 1px solid #D9D9D9;
 }
 
 .slideshow-container {
@@ -904,4 +910,38 @@ footer .div5 a {
   footer .div5 a {
     display: inline;
   }
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(72, 67, 67, 0.5);
+  padding: 20px;
+  border: 5px solid #BF0F0F;
+  border-radius: 5x;
+  z-index: 1;
+}
+
+.popup-content {
+  text-align: center;
+  background-color: #D9D9D9;
+  border: 3px solid rgba(255, 255, 255, 0.2588235294);
+  border-radius: 5x;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-family: Inter;
+}
+
+.close-button {
+  position: absolute;
+  color: #BF0F0F;
+  font-size: 20px;
+  font-family: Roboto;
+  font-weight: 900;
+  top: 0px;
+  right: 5px;
+  cursor: pointer;
 }/*# sourceMappingURL=nov.css.map */

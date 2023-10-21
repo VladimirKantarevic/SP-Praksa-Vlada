@@ -24,12 +24,37 @@
     <header>
         <div class="logo">
             <div class="logoleft">
-                <img src="img\logo.png" alt="logo">
-                <!-- <div><h3>DVG COMPANY</h3>
-                    <p>SUBOTICA</p>
-                </div> -->
+                <div class="toggle-theme" id="light-mode"><img src="img\dark.png" alt=""></div>
+                <div class="logoleft">
+                    <img src="img\logo.png" alt="logo">
+                    <!-- <div><h3>DVG COMPANY</h3>
+                        <p>SUBOTICA</p>
+                    </div> -->
+                </div>
             </div>
-            <div class="logoright"><a href="#">Srpski</a> <a href="#">English</a> <a href="#">Magyar</a></div>
+            <div class="logoright">
+                <a href="#">Srpski</a>
+                <a href="#">English</a>
+                <a href="#">Magyar</a>
+            </div>
+            <div id="menu">
+                <div id="menu-bar" onclick="menuOnClick()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+                <nav class="nav" id="nav">
+                    <ul>
+                        <li><a href="#">O NAMA</a></li>
+                        <li><a href="#">DVG PROZIVODI</a></li>
+                        <li><a href="#">BRENDOVI</a></li>
+                        <li><a href="#">DISTRIBUCIJA</a></li>
+                        <li><a href="#">SARADNJA</a></li>
+                        <li><a href="#">NOVOSTI</a></li>
+                        <li><a href="#">KONTAKT</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
         <nav>
             <div class="navi">
@@ -62,24 +87,6 @@
                     <p>kontaktirajte nas</p>
                 </button>
             </div>
-            <div id="menu">
-                <div id="menu-bar" onclick="menuOnClick()">
-                    <div id="bar1" class="bar"></div>
-                    <div id="bar2" class="bar"></div>
-                    <div id="bar3" class="bar"></div>
-                </div>
-                <nav class="nav" id="nav">
-                    <ul>
-                        <li><a href="#">O NAMA</a></li>
-                        <li><a href="#">DVG PROZIVODI</a></li>
-                        <li><a href="#">BRENDOVI</a></li>
-                        <li><a href="#">DISTRIBUCIJA</a></li>
-                        <li><a href="#">SARADNJA</a></li>
-                        <li><a href="#">NOVOSTI</a></li>
-                        <li><a href="#">KONTAKT</a></li>
-                    </ul>
-                </nav>
-            </div>
         </nav>
         <section class="slider">
             <div class="slideshow-container">
@@ -95,10 +102,10 @@
                 </div>
 
                 <!-- Next and previous buttons -->
-                <div class="slide-button">
+                <!-- <div class="slide-button">
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                     <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                </div>
+                </div> -->
             </div>
             <br>
 
@@ -309,6 +316,16 @@
             <p>Powered by <a href="https://www.studiopresent.rs/">StudioPresent</a></p>
         </div>
     </footer>
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h2>🎉 Exclusive Offer for You! 🎉</h2>
+            <p>Welcome to DVG Company! We appreciate your visit. As a token of our appreciation, we're excited to offer you an exclusive discount:</p>
+            <p>🌟 <strong>Get 10% OFF</strong> on your next purchase!</p>
+            <a href="#" id="claim-discount">Claim My Discount</a>
+            <p>This offer is valid for a limited time, so don't miss out. Use code: SAVE10 at checkout to redeem your discount. Explore our collection and discover top-quality products.</p>
+            <span class="close-button" id="close-button">X</span>
+        </div>
+    </div>
 </body>
 
 </html>

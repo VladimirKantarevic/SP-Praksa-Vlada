@@ -6,3 +6,10 @@ $font: 14px;
 $navcolor: #595959;
 $textcolor: #474747;
 $red: #BF0F0F;
+// $dark-theme: true;
+
+// @if $dark-theme {
+//     $main: darken($main, 60%);
+//     $lightgrey: darken($lightgrey, 60%);
+//     $textcolor: lighten($textcolor, 60%);
+//   }

@@ -31,6 +31,7 @@ html[data-theme=dark] {
 
 body {
   background-color: var(--color-background);
+  color: var(--color-text);
 }
 
 .logo {
@@ -264,30 +265,6 @@ body {
   }
 }
 
-.prev,
-.next {
-  cursor: pointer;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
 .dot {
   cursor: pointer;
   position: relative;
@@ -311,14 +288,6 @@ body {
   animation-duration: 1.5s;
 }
 
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
 .main1 {
   display: flex;
   flex-wrap: wrap;
@@ -484,12 +453,12 @@ body {
   padding: 5%;
 }
 .main3 .small {
-  width: 90%;
+  width: 80%;
   padding: 1%;
 }
 @media only screen and (min-width: 481px) {
   .main3 .small {
-    width: 50%;
+    width: 60%;
   }
 }
 @media only screen and (min-width: 769px) {
@@ -506,6 +475,7 @@ body {
   font-size: 18px;
   line-height: 22px;
   text-align: left;
+  color: var(--color-text);
 }
 @media only screen and (min-width: 481px) {
   .main3 .small p {
@@ -527,6 +497,7 @@ body {
   align-items: center;
   gap: 1rem;
   padding: 5%;
+  color: var(--color-text);
 }
 .main4 h2 {
   font-family: Roboto;
@@ -674,7 +645,6 @@ body {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  background-color: white;
 }
 @media only screen and (min-width: 481px) {
   .main6 .items .item {
@@ -691,7 +661,7 @@ body {
   display: flex;
   position: relative;
   flex-direction: column;
-  width: 100%;
+  width: 80%;
   bottom: 20%;
   left: 10%;
 }
@@ -705,6 +675,7 @@ body {
   font-size: 22px;
   line-height: 20px;
   text-align: left;
+  color: #474747;
 }
 .main6 .items .item .tag .red-line {
   background-color: #bf0f0f;
@@ -726,6 +697,7 @@ body {
   font-size: 28px;
   line-height: 34px;
   width: auto;
+  color: black;
 }
 @media only screen and (min-width: 481px) {
   .main7 h3 {
@@ -793,11 +765,11 @@ footer {
   width: 100%;
   background-image: url(/img/footerbackgorund.png);
   background-size: cover;
-  background-color: var(--color-text);
-  color: #ffffff;
+  background-color: #474747;
+  color: #f4f4f4;
 }
 footer a {
-  color: #ffffff;
+  color: #f4f4f4;
 }
 footer .foot {
   display: flex;

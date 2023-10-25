@@ -10,6 +10,7 @@
 
 body {
   background-color: var(--color-background);
+  color: var(--color-text);
 }
 
 .logo {
@@ -261,28 +262,6 @@ body {
   }
 }
 
-.prev,
-.next {
-  cursor: pointer;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
 .dot {
   cursor: pointer;
   position: relative;
@@ -304,16 +283,6 @@ body {
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
 
 .main1 {
@@ -481,11 +450,11 @@ body {
   padding: 5%;
 
   .small {
-    width: 90%;
+    width: 80%;
     padding: 1%;
 
     @media only screen and (min-width: 481px) {
-      width: 50%;
+      width: 60%;
     }
 
     @media only screen and (min-width: 769px) {
@@ -502,6 +471,7 @@ body {
       font-size: 18px;
       line-height: 22px;
       text-align: left;
+      color: var(--color-text);
 
       @media only screen and (min-width: 481px) {
         font-size: 24px;
@@ -525,6 +495,7 @@ body {
   align-items: center;
   gap: 1rem;
   padding: 5%;
+  color: var(--color-text);
 
   h2 {
     font-family: Roboto;
@@ -677,7 +648,6 @@ body {
       flex-direction: column;
       width: 100%;
       object-fit: cover;
-      background-color: white;
 
       @media only screen and (min-width: 481px) {
         width: 30%;
@@ -692,7 +662,7 @@ body {
         display: flex;
         position: relative;
         flex-direction: column;
-        width: 100%;
+        width: 80%;
         bottom: 20%;
         left: 10%;
 
@@ -705,6 +675,7 @@ body {
           font-size: 22px;
           line-height: 20px;
           text-align: left;
+          color: $textcolor;
         }
 
         .red-line {
@@ -731,6 +702,7 @@ body {
     font-size: 28px;
     line-height: 34px;
     width: auto;
+    color: black;
 
     @media only screen and (min-width: 481px) {
       width: 50%;
@@ -802,11 +774,11 @@ footer {
   width: 100%;
   background-image: url(/img/footerbackgorund.png);
   background-size: cover;
-  background-color: var(--color-text);
-  color: #ffffff;
+  background-color: $textcolor;
+  color: $main;
 
   a {
-    color: #ffffff;
+    color: $main;
   }
 
   .foot {

@@ -1,38 +1,8 @@
 function menuOnClick() {
   document.getElementById("menu-bar").classList.toggle("change");
   document.getElementById("nav").classList.toggle("change");
-  document.getElementById("menu-bg").classList.toggle("change-bg");
+  // document.getElementById("menu-bg").classList.toggle("change-bg");
 }
-
-// SLIDE SHOW
-// let slideIndex = 1;
-// showSlides(slideIndex);
-
-// // Next/previous controls
-// function plusSlides(n) {
-//   showSlides(slideIndex += n);
-// }
-
-// // Thumbnail image controls
-// function currentSlide(n) {
-//   showSlides(slideIndex = n);
-// }
-
-// function showSlides(n) {
-//   let i;
-//   let slides = document.getElementsByClassName("mySlides");
-//   let dots = document.getElementsByClassName("dot");
-//   if (n > slides.length) {slideIndex = 1}
-//   if (n < 1) {slideIndex = slides.length}
-//   for (i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";
-//   }
-//   for (i = 0; i < dots.length; i++) {
-//     dots[i].className = dots[i].className.replace(" active", "");
-//   }
-//   slides[slideIndex-1].style.display = "block";
-//   dots[slideIndex-1].className += " active";
-// }
 
 let slideIndex = 0;
 showSlides();
@@ -45,7 +15,9 @@ function showSlides() {
     slides[i].style.display = "none";
   }
   slideIndex++;
-  if (slideIndex > slides.length) { slideIndex = 1 }
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
@@ -67,7 +39,7 @@ var swiper = new Swiper(".mySwiper", {
     },
     640: {
       slidesPerView: 5,
-    }
+    },
   },
   coverflowEffect: {
     rotate: 0,
@@ -81,58 +53,62 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-var rellax = new Rellax('.rellax', {
+var rellax = new Rellax(".rellax", {
   // wrapper:'.main2'
 });
 
+//POPUP
 
-// //dark mode
-// const darkModeToggle = document.getElementById("dark-mode-toggle");
-// const body = document.body;
-
-// // Check for user's preference in local storage
-// if (localStorage.getItem("dark-mode") === "enabled") {
-//   body.classList.add("dark-mode");
-// }
-
-// darkModeToggle.addEventListener("click", () => {
-//   if (body.classList.contains("dark-mode")) {
-//     body.classList.remove("dark-mode");
-//     localStorage.setItem("dark-mode", "disabled");
-//   } else {
-//     body.classList.add("dark-mode");
-//     localStorage.setItem("dark-mode", "enabled");
-//   }
-// });
-
-//popup
-document.addEventListener('DOMContentLoaded', function() {
-  const popup = document.getElementById('popup');
-  const closeButton = document.getElementById('close-button');
+document.addEventListener("DOMContentLoaded", function () {
+  const popup = document.getElementById("popup");
+  const closeButton = document.getElementById("close-button");
   let scrollTimer;
 
   // Function to show the pop-up
   function showPopup() {
-      document.body.style.overflow = 'hidden';
-      popup.style.display = 'block';
+    document.body.style.overflow = "hidden";
+    popup.style.display = "block";
   }
 
   // Function to close the pop-up
   function closePopup() {
-      popup.style.display = 'none';
-      document.body.style.overflow = 'auto';
+    popup.style.display = "none";
+    document.body.style.overflow = "auto";
+    window.removeEventListener("scroll", timer);
+  }
+
+  function timer() {
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(showPopup, 2000);
   }
 
   // Show the pop-up after 2 seconds of scrolling
-  window.addEventListener('scroll', function() {
-      clearTimeout(scrollTimer);
-      scrollTimer = setTimeout(showPopup, 2000);
-  });
+  window.addEventListener("scroll", timer);
 
   // Close the pop-up when the 'X' button is clicked
-  closeButton.addEventListener('click', closePopup);
+  closeButton.addEventListener("click", closePopup);
 });
 
+//DARK MODE
 
+document.documentElement.setAttribute("data-theme", "light");
 
+let dark = false;
 
+var checkbox = document.getElementById("dark-mode");
+
+checkbox.addEventListener("change", (event) => {
+  if (event.currentTarget.checked) {
+    document.documentElement.setAttribute(
+      "data-theme",
+      dark ? "light" : "dark"
+    );
+    dark = !dark;
+  } else {
+    document.documentElement.setAttribute(
+      "data-theme",
+      dark ? "light" : "dark"
+    );
+    dark = !dark;
+  }
+});

@@ -1,0 +1,52 @@
+.popup {
+  display: none;
+  position: fixed;
+  width: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--color-text);
+  box-shadow: 0 0 10px rgba(72, 67, 67, 0.5);
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 1;
+  font-size: 14px;
+  font-family: Roboto;
+
+  @media only screen and (min-width: 481px) {
+    width: auto;
+  }
+}
+
+.popup-content {
+  text-align: center;
+  background-color: var(--color-lightgrey);
+  border: 3px solid $border;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-family: Inter;
+  color: var(--color-text);
+  padding: 2px;
+
+  button {
+    @include button;
+    padding: 10px;
+    margin: 10px;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+.close-button {
+  position: absolute;
+  color: $red;
+  font-size: 20px;
+  font-family: Roboto;
+  font-weight: 900;
+  top: 0px;
+  right: 5px;
+  cursor: pointer;
+}

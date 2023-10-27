@@ -32,13 +32,13 @@ var swiper = new Swiper(".mySwiper", {
   centeredSlides: true,
   loop: true,
   autoHeight: true,
-  // slidesPerView: 3,
+  slidesPerView: 2,
   breakpoints: {
-    320: {
+    480: {
       slidesPerView: 3,
     },
     640: {
-      slidesPerView: 5,
+      slidesPerView: 4,
     },
   },
   coverflowEffect: {
